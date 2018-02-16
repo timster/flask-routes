@@ -26,6 +26,6 @@ def command():
     for route in get_routes(current_app):
         txt_url = click.style(route['url'], fg='green', bold=True)
         txt_endpoint = click.style(route['endpoint'], fg='red')
-        txt_methods = click.style(route['methods'], fg='white')
+        txt_methods = click.style(route['methods'])
 
         click.echo('{} {} ({})'.format(txt_url, txt_endpoint, txt_methods))
